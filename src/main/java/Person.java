@@ -1,19 +1,20 @@
 public class Person {
-    String firstName;
-    String lastName;
-    int age;
+    private final String firstName;
+    private final String lastName;
+    private final int age;
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
     public void introduce() {
-        System.out.println("Привет, меня зовут " + firstName + " " + lastName + ". Мне " + age + " года.");
+        System.out.println("Привет, меня зовут " + firstName + " " + lastName + ". Мне " + age + " лет.");
     }
 
     public static void main(String[] args) {
-        Person pr = new Person();
-        pr.firstName = "Никита";
-        pr.lastName = "Демидович";
-        pr.age = 23;
-
-        pr.introduce();
+        Person person = new Person("Никита", "Демидович", 23);
+        person.introduce();
     }
-
 }

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class BudgetDemo {
     public static void main(String[] args) {
@@ -20,9 +21,9 @@ public class BudgetDemo {
         System.out.println("Общая сумма всех товаров: " + total + " рублей.");
 
         if (budget >= total) {
-            System.out.printf("Бюджета хватает! Остаток: %.2f рублей.%n", budget - total);
+            System.out.printf(Locale.US,"Бюджета хватает! Остаток: %.2f рублей.%n", budget - total);
         } else {
-            System.out.printf("Не хватает: %.2f рублей!%n", total - budget);
+            System.out.printf(Locale.US, "Не хватает: %.2f рублей!%n", total - budget);
         }
     }
 }

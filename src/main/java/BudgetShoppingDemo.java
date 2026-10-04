@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Locale;
 
 public class BudgetShoppingDemo {
     public static void main(String[] args) {
@@ -18,8 +19,8 @@ public class BudgetShoppingDemo {
         double remaining = budget - spent;
         int notBought = prices.size() - boughtCount;
 
-        System.out.printf("Куплено: %d товара на сумму %.2f%n", boughtCount, spent);
-        System.out.printf("Остаток бюджета: %.2f%n", remaining);
+        System.out.printf(Locale.US,"Куплено: %d товара на сумму %.2f%n", boughtCount, spent);
+        System.out.printf(Locale.US,"Остаток бюджета: %.2f%n", remaining);
         System.out.printf("Не куплено: %d товара%n", notBought);
     }
 }
