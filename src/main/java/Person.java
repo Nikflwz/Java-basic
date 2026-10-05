@@ -14,7 +14,21 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person person = new Person("Никита", "Демидович", 23);
-        person.introduce();
+
+        // Старый способ — 5 строк на один объект:
+        // Person person = new Person();
+        // person.firstName = "Никита";
+        // person.lastName = "Демидович";
+        // person.age = 23;
+        // person.introduce();
+
+        Person person1 = new Person("Никита", "Демидович", 23);
+        person1.introduce();
+
+        Person person2 = new Person("Антон", "Иванов", 33);
+        person2.introduce();
+
+        Person person3 = new Person("Олег", "Каштанов", 63);
+        person3.introduce();
     }
 }
